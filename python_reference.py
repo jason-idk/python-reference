@@ -126,3 +126,67 @@ print(t2.count('one'))
 
 # Show index of where 'one' appears in tuple the first time...
 print(t2.index('one'))
+
+
+# Sets (unordered collections of unique elements)
+#-------------------------------------------------#
+my_set = set()
+
+# Add values to my_set...
+my_set.add(1)
+print(my_set)
+
+# Convert messy list to set and rid of the duplicate values...
+shitlist = [1,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3]
+print(shitlist)
+set(shitlist) # results in {1, 2, 3}
+
+
+# Booleans (T or F)
+#-------------------------------#
+# Must have capitalized True or False
+print(1 > 2)  # returns False
+print(1 == 1) # returns True
+
+
+# I/O with Basic Files
+#-------------------------------#
+# To open file called file.txt OLDER WAY OF DOING THIS...
+my_file = open('./scratch/file.txt')
+
+# Read contents of file.txt
+my_file.read()
+
+# To re-read, you must seek the cursor back to 0
+my_file.seek(0)
+my_file.read()
+
+# Output with cleaner lines, allows for looping through list...
+my_file.seek(0)
+my_file.readlines()
+
+# Close file after using...
+my_file.close()
+
+# Better way to open file... This will close the file when you are done using it. Call contents to see content of file.
+with open('./scratch/file.txt') as my_new_file:
+    contents = my_new_file.read()
+
+# Permissions:
+# r = read
+# w = write
+# a = append
+# r+ = read and write
+# w+ = write and read (overwrites existing file or creates new)
+
+# Open with read-only mode...
+with open('./scratch/file.txt',mode='r') as my_new_file:
+    contents = my_new_file.read()
+
+# Open with write-only mode...
+with open('./scratch/0sdf3we9edf.txt',mode='w') as my_new_file:
+    contents = my_new_file.write('Created by Python')
+
+# Append new lines to end of file...
+with open('./scratch/file.txt',mode='a') as my_new_file:
+    my_new_file.write('\nNewly appended line')
