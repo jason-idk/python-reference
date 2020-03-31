@@ -2,7 +2,6 @@
 # This python script serves as an example to reference
 # while learning/re-learning python. There will be different
 # Sections added and they will be labeled accordingly.
-from builtins import zip
 
 #---------------------------#
 # Object and Data Structure #
@@ -415,6 +414,7 @@ for index,letter in enumerate(word):
 # Zip
 ###################################
 # Zip list together from 2 seperate list, giving us tuples (1, a) (2, b)...
+from builtins import zip
 list_1 = [1,2,3]
 list_2 = ['a','b','c','d'] # If there is an extra value in a list, it will be left out. 
 list_3 = [11,12,13]
