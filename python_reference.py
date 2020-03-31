@@ -483,4 +483,61 @@ print(int(result))
 
 
 
+# List Comprehensions
+#-------------------------------#
+# Creating a list using the append method...
+hello_string = 'hello'
+ex_list = []
+
+for letter in hello_string:
+    ex_list.append(letter)
+
+print(ex_list)
+
+# More efficient way of doing this...
+ex_list = [letter for letter in hello_string]
+
+print(ex_list)
+
+num_list = [num for num in range(0,11)]
+
+print(num_list)
+
+# You can get more versatile with this as well...
+num_list = [x for x in range(0,11) if x%2==0] # Number in range provided, but only if divisible by 2...
+
+print(num_list)
+
+num_list = [x**2 for x in range(0,11) if x%2==0] # Same thing, but the square root of the even numbers...
+
+print(num_list)
+
+# Converting celcius to fahrenhite example...
+celcius_temp = [10,20,35,36.8]
+fahrenhite_temp = []
+
+for temp in celcius_temp:
+    fahrenhite_temp.append(( (9/5)*temp + 32))
+
+print(fahrenhite_temp)
+
+# Lets flatten this out...
+fahrenhite_temp = [( (9/5)*temp + 32) for temp in celcius_temp]
+
+print(fahrenhite_temp)
+
+
+
+# Methods and Functions
+#-------------------------------#
+
+
+
+
+
+
+
+
+
+
 
